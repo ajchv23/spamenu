@@ -1,0 +1,14 @@
+.category-caption {
+    color: white;
+    position: relative;
+    text-align: center;
+    bottom: 120px;
+}
+
+.category {
+    text-align: center;
+}
+
+.category img {
+    opacity: 0.6;
+}

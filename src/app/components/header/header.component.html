@@ -17,11 +17,9 @@
                 </li>
 
             </ul>
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Buscar</button>
-            </form>
-            &nbsp;
+
+            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" (keyup.enter)="buscarTexto(cajaTexto.value); cajaTexto.value = ''" #cajaTexto>
+            <button class="btn btn-outline-success" type="button" (click)="buscarTexto(cajaTexto.value); cajaTexto.value = ''">Buscar</button> &nbsp;
             <button class="btn btn-outline-success" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fa-solid fa-cart-shopping"></i></button>
         </div>
     </div>

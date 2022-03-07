@@ -24,7 +24,8 @@ export class HeroesComponent implements OnInit {
 
     console.log(this.heroes);
   }
-
+  
+  //Este es el evento que llamo desde el hijo con el output
   verHeroe(idx:number){
 
     this.router.navigate( ['heroe', idx] );

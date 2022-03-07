@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
+  backButton:boolean = false;
+
   constructor(private _heroesService:HeroesService, private router:Router) { }
 
   ngOnInit(): void {

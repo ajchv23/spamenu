@@ -1,26 +1,32 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <a class="navbar-brand" [routerLink]="['/home']" *ngIf="!backButton">
+            <img src="/assets/img/logo_temp.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+        </a>
+        <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button> -->
+        <div class="" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                <!-- 
                 <li class="nav-item" routerLinkActive="active">
-                    <a class="nav-link" aria-current="page" [routerLink]="['home']">Home</a>
+                    <a class="nav-link" aria-current="page" [routerLink]="['/home']">Home</a>
+                </li>
+                    <li class="nav-item" routerLinkActive="active">
+                    <a class="nav-link " aria-current="page" [routerLink]="['/heroes']">Heroes</a>
                 </li>
                 <li class="nav-item" routerLinkActive="active">
-                    <a class="nav-link " aria-current="page" [routerLink]="['heroes']">Heroes</a>
-                </li>
-                <li class="nav-item" routerLinkActive="active">
-                    <a class="nav-link " aria-current="page" [routerLink]="['about']">About</a>
-                </li>
+                    <a class="nav-link " aria-current="page" [routerLink]="['/about']">About</a>
+                </li> -->
 
             </ul>
 
-            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" (keyup.enter)="buscarTexto(cajaTexto.value); cajaTexto.value = ''" #cajaTexto>
-            <button class="btn btn-outline-success" type="button" (click)="buscarTexto(cajaTexto.value); cajaTexto.value = ''">Buscar</button> &nbsp;
-            <button class="btn btn-outline-success" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fa-solid fa-cart-shopping"></i></button>
+            <!-- <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" (keyup.enter)="buscarTexto(cajaTexto.value); cajaTexto.value = ''" #cajaTexto>
+            <button class="btn btn-outline-success" type="button" (click)="buscarTexto(cajaTexto.value); cajaTexto.value = ''">Buscar</button> &nbsp; -->
+            <button [routerLink]="['/home']" class="btn btn-light me-2"><i class="fa-solid fa-house c-gray"></i></button>
+            <button [routerLink]="['/about']" class="btn btn-light me-2"><i class="fa-solid fa-circle-info c-gray"></i></button>
+            <button class="btn btn-light" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fa-solid fa-cart-shopping c-gray"></i></button>
         </div>
     </div>
 </nav>
